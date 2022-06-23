@@ -4,19 +4,21 @@ body{
     height: 100%;
     width: 100%;
     margin: auto;
+    background-color: rgb(11, 39, 71);
+    color: aliceblue;
 }
 
 header{
     position: absolute;
     height: 10%;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: rgb(59, 91, 128);
 }
 
 #menu{
     height: 100%;
     width: 50%;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid rgb(150, 181, 216);
     margin: auto;
 }
 
@@ -48,8 +50,8 @@ header{
     width: 25%;
     margin: 0;
     margin-top: 50px;
-    border-top: 2px solid #000000;
-    border-right: 2px solid #000000;
+    border-top: 2px solid rgb(150, 181, 216);
+    border-right: 2px solid rgb(150, 181, 216);
 }
 
 #content_esq p{
@@ -63,8 +65,8 @@ header{
     width: 25%;
     margin: 0;
     margin-top: 50px;
-    border-top: 2px solid #000000;
-    border-left: 2px solid #000000;
+    border-top: 2px solid rgb(150, 181, 216);
+    border-left: 2px solid rgb(150, 181, 216);
 }
 
 #content_dir p{
@@ -82,7 +84,7 @@ header{
 #content_meio h1{
     text-align: center;
     margin: 5%;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid rgb(150, 181, 216);
     cursor: pointer;
 }
 
@@ -95,7 +97,7 @@ header{
     padding: 10px;
     max-width: 100%;
     max-height: 100%;
-    background-color: antiquewhite;
+    background-color: rgb(59, 91, 128);
 }
 
 #content_one:hover,
@@ -103,7 +105,7 @@ header{
 #content_three:hover{
     transform: scale(1.005);
     opacity: 100%;
-    background-color: rgba(0, 0, 0, 0.123);
+    background-color: rgba(255, 255, 255, 0.123);
 }
 
 #content_one p,
