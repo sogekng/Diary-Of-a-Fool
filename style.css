@@ -76,9 +76,9 @@ header{
 }
 
 #content_meio{
-    height: 100%;
     width: 50%;
     margin: 0 2%;
+    height: auto;
 }
 
 #content_meio h1{
@@ -88,11 +88,21 @@ header{
     cursor: pointer;
 }
 
+#content_contents{
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 350px;
+}
+
 #content_one,
 #content_two,
-#content_three{
+#content_three,
+#content_four,
+#content_five{
     cursor: pointer;
-    width: 92%;
+    width: auto;
+    margin: 0;
     height: auto;
     padding: 10px;
     max-width: 100%;
@@ -102,14 +112,32 @@ header{
 
 #content_one:hover,
 #content_two:hover,
-#content_three:hover{
-    transform: scale(1.005);
+#content_three:hover,
+#content_four:hover,
+#content_five:hover{
+    transform: scale(1.0005);
     opacity: 100%;
     background-color: rgba(255, 255, 255, 0.123);
 }
 
 #content_one p,
-#content_two p
-#content_three p{
+#content_two p,
+#content_three p,
+#content_four p,
+#content_five{
     text-align: center;
+}
+
+#content_contents::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: rgb(11, 39, 71);
+}
+
+#content_contents::-webkit-scrollbar-thumb {
+    background: rgb(150, 181, 216);
+}
+
+#content_contents::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 255, 255, 0.123);
 }
