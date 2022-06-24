@@ -84,6 +84,7 @@ header{
     cursor: pointer;
 }
 
+#content_meio h1 a,
 #content_menu p a,
 #content_esq p a,
 #content_dir p a{
