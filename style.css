@@ -37,6 +37,15 @@ header{
     cursor: pointer;
 }
 
+:target {
+    animation: highlight 1s ease;    
+}
+
+@keyframes highlight {
+    0% { opacity: 50%;}
+    100% { opacity: 100%;}
+}
+
 #content{
     position: absolute;
     top: 10%;
@@ -75,6 +84,13 @@ header{
     cursor: pointer;
 }
 
+#content_menu p a,
+#content_esq p a,
+#content_dir p a{
+    text-decoration: none;
+    color: white;
+}
+
 #content_meio{
     width: 50%;
     margin: 0 2%;
@@ -83,7 +99,8 @@ header{
 
 #content_meio h1{
     text-align: center;
-    margin: 5%;
+    margin: 0 5%;
+    margin-top: 5%;
     border-bottom: 2px solid rgb(150, 181, 216);
     cursor: pointer;
 }
@@ -99,14 +116,13 @@ header{
 #content_two,
 #content_three,
 #content_four,
-#content_five{
+#content_five,
+#content_six{
     cursor: pointer;
     width: auto;
-    margin: 0;
+    margin: 3% 0;
     height: auto;
     padding: 10px;
-    max-width: 100%;
-    max-height: 100%;
     background-color: rgb(59, 91, 128);
 }
 
@@ -114,17 +130,17 @@ header{
 #content_two:hover,
 #content_three:hover,
 #content_four:hover,
-#content_five:hover{
-    transform: scale(1.0005);
-    opacity: 100%;
-    background-color: rgba(255, 255, 255, 0.123);
+#content_five:hover,
+#content_six:hover{
+    animation: highlight 1s step-end;
 }
 
 #content_one p,
 #content_two p,
 #content_three p,
 #content_four p,
-#content_five{
+#content_five,
+#content_six{
     text-align: center;
 }
 
