@@ -122,6 +122,7 @@ header{
     cursor: pointer;
     width: 90%;
     height: auto;
+    margin: auto;
     background-color: rgb(59, 91, 128);
 }
 
@@ -134,6 +135,7 @@ header{
     animation: highlight 1s ease;
 }
 
+
 #content_one p,
 #content_two p,
 #content_three p,
@@ -143,30 +145,54 @@ header{
     text-align: center;
 }
 
-#content_one_content{
-    cursor: pointer;
+
+#content_one_content,
+#content_two_content,
+#content_three_content,
+#content_four_content,
+#content_five_content,
+#content_six_content{
     margin: 3.5% 0;
     height: 50px;
-    width: 0%;
+    width: 2%;
     transition: width 1s;
     transition-timing-function: ease;
 }
 
-#content_one_content p{
+
+#content_one_content p,
+#content_two_content p,
+#content_three_content p,
+#content_four_content p,
+#content_five_content p,
+#content_six_content p{
+    color: black;
     display: none;
     text-align: center;
     transition: display 1s;
     transition-timing-function: ease;
 }
 
-#content_one_content:hover{
-    width: 100%;
+
+#content_one_content:hover,
+#content_two_content:hover,
+#content_three_content:hover,
+#content_four_content:hover,
+#content_five_content:hover,
+#content_six_content:hover{
+    width: 96.5%;
     height: auto;
     padding: 10px;
 }
 
 
-#content_one_content:hover p{
+#content_one_content:hover p,
+#content_two_content:hover p,
+#content_three_content:hover p,
+#content_four_content:hover p,
+#content_five_content:hover p,
+#content_six_content:hover p{
+    color: black;
     display: block;
 }
 

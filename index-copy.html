@@ -1,53 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-        }
-        #box-content{
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            margin: auto;
-            display: flex;
-            background-color: antiquewhite;
-        }
-        #box{
-            height: 15%;
-            width: 30%;
-            margin: auto;
-            background-color: rgba(0, 0, 255, 0.479);
-            border: 2px solid black;
-        }
-        #content{
-            height: 100%;
-            width: 0%;
-            border-left: 25px solid rgb(255, 60, 0);
-            background-color: rgb(255, 60, 0);
-            transition: width 1s;
-            transition-timing-function: ease;
-        }
-        #content:hover{
-            width: 100%;
-        }
+<input type="button" value="clicar" id="btn" onclick="clicar()">
+<input type="button2" value="clicar" id="btn" onclick="arrastar(divElement2)">
+DIV criada apenas para armazenar as demais divs
+<div id="mae"></div>
+<script>
+  //A variável de ID ficou fora das funções para manter o estado...
+  let id = 0;
 
-        @keyframes complete{
-            100% { transition: width 100%; background-color: rgb(255, 60, 0);}
-        }
-    </style>
-</head>
-<body>
-    <div id="box-content">
-        <div id="box">
-            <div id="content">
+  //Retorna o próximo ID válido para a DIV que será criada
+  function getNextId() {
+    return ++id;
+  }
 
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+  function arrastar(x){
+    x.style.width = '100%'
+  }
+
+  //Sua função, chamada no click do botão
+  function clicar(){
+      //Pego o ID
+      let id = getNextId();
+      //Crio a DIV
+      let divElement = document.createElement("div");
+      let divElement2 = document.createElement("div");
+      //Pego a DIV onde a nova DIV será criada, sempre na DIV mãe
+      let divMae = document.getElementById("mae");
+
+      //A ideia do ID é que ele seja um elemento único, ou seja, não se repita
+      divElement.setAttribute('id', 'box' + id.toString());
+      divElement2.setAttribute('id', 'box' + id.toString());
+      //CSS
+      divElement.style.width = "100%";
+      divElement.style.height = "50px";
+      divElement.style.margin = "10px";
+      divElement.style.backgroundColor = 'blue';
+      divElement.style.borderLeft = '5mm solid red'
+      divElement.style.cursor = 'pointer'
+      
+
+      divElement2.style.height = '100%';
+      divElement2.style.backgroundColor = 'red';
+      divElement2.style.transition = 'width 1s';
+      divElement2.style.width = '0%';
+      divElement2.style.transitionTimingFunction = 'ease';
+
+      //Adiciono a nova DIV na DIV mãe
+      //Aqui poderia ser por exemplo document.body.appendChild, adicionando assim o elemento criado diretamente no body
+      divMae.appendChild(divElement);
+      divElement.appendChild(divElement2)
+  }
+</script>
