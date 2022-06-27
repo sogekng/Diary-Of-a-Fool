@@ -120,10 +120,8 @@ header{
 #content_five,
 #content_six{
     cursor: pointer;
-    width: auto;
-    margin: 3.5% 0;
+    width: 90%;
     height: auto;
-    padding: 10px;
     background-color: rgb(59, 91, 128);
 }
 
@@ -133,7 +131,7 @@ header{
 #content_four:hover,
 #content_five:hover,
 #content_six:hover{
-    animation: highlight 1s step-end;
+    animation: highlight 1s ease;
 }
 
 #content_one p,
@@ -143,6 +141,33 @@ header{
 #content_five,
 #content_six{
     text-align: center;
+}
+
+#content_one_content{
+    cursor: pointer;
+    margin: 3.5% 0;
+    height: 50px;
+    width: 0%;
+    transition: width 1s;
+    transition-timing-function: ease;
+}
+
+#content_one_content p{
+    display: none;
+    text-align: center;
+    transition: display 1s;
+    transition-timing-function: ease;
+}
+
+#content_one_content:hover{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+
+#content_one_content:hover p{
+    display: block;
 }
 
 #content_contents::-webkit-scrollbar {
