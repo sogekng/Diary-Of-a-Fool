@@ -120,7 +120,7 @@ header{
 #content_five,
 #content_six{
     cursor: pointer;
-    width: 90%;
+    width: 500px;
     height: auto;
     margin: auto;
     background-color: rgb(59, 91, 128);
@@ -152,7 +152,7 @@ header{
 #content_four_content,
 #content_five_content,
 #content_six_content{
-    margin: 3.5% 0;
+    margin: 2% 0;
     height: 50px;
     width: 2%;
     transition: width 1s;
@@ -180,7 +180,7 @@ header{
 #content_four_content:hover,
 #content_five_content:hover,
 #content_six_content:hover{
-    width: 96.5%;
+    width: 96%;
     height: auto;
     padding: 10px;
 }

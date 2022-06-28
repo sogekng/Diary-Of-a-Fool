@@ -1,51 +1,33 @@
-<input type="button" value="clicar" id="btn" onclick="clicar()">
-<input type="button2" value="clicar" id="btn" onclick="arrastar(divElement2)">
-DIV criada apenas para armazenar as demais divs
-<div id="mae"></div>
-<script>
-  //A variável de ID ficou fora das funções para manter o estado...
-  let id = 0;
-
-  //Retorna o próximo ID válido para a DIV que será criada
-  function getNextId() {
-    return ++id;
-  }
-
-  function arrastar(x){
-    x.style.width = '100%'
-  }
-
-  //Sua função, chamada no click do botão
-  function clicar(){
-      //Pego o ID
-      let id = getNextId();
-      //Crio a DIV
-      let divElement = document.createElement("div");
-      let divElement2 = document.createElement("div");
-      //Pego a DIV onde a nova DIV será criada, sempre na DIV mãe
-      let divMae = document.getElementById("mae");
-
-      //A ideia do ID é que ele seja um elemento único, ou seja, não se repita
-      divElement.setAttribute('id', 'box' + id.toString());
-      divElement2.setAttribute('id', 'box' + id.toString());
-      //CSS
-      divElement.style.width = "100%";
-      divElement.style.height = "50px";
-      divElement.style.margin = "10px";
-      divElement.style.backgroundColor = 'blue';
-      divElement.style.borderLeft = '5mm solid red'
-      divElement.style.cursor = 'pointer'
-      
-
-      divElement2.style.height = '100%';
-      divElement2.style.backgroundColor = 'red';
-      divElement2.style.transition = 'width 1s';
-      divElement2.style.width = '0%';
-      divElement2.style.transitionTimingFunction = 'ease';
-
-      //Adiciono a nova DIV na DIV mãe
-      //Aqui poderia ser por exemplo document.body.appendChild, adicionando assim o elemento criado diretamente no body
-      divMae.appendChild(divElement);
-      divElement.appendChild(divElement2)
-  }
-</script>
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Curso de Javascript</title>
+		<meta charset=“UTF-8”>
+		<script>
+			
+			function addLI(veiculo){
+				if(veiculo == ""){
+					alert("Informe um veículo");
+					document.getElementById("txtVeiculo").focus();
+				}else{
+					var lista=document.getElementById("transp");
+					var novoItem=document.createElement("li");
+					novoItem.textContent=veiculo;
+					lista.appendChild(novoItem);
+				}
+			}
+		
+		</script>
+	</head>
+	<body>
+	
+		<input type="text" value="" id="txtVeiculo">
+		<button onclick="addLI(document.getElementById('txtVeiculo').value)">Adicionar</button>
+	
+		<ul id="transp">
+			<li>Avião</li>
+			<li>Carro</li>
+			<li>Moto</li>
+		</ul>
+	</body>
+</html>
